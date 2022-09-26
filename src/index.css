@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .login-desktop {
+    @apply flex m-0 h-screen;
+  }
+  .login-desktop__form {
+    @apply flex justify-center content-center  w-1/2 h-screen;
+  }
+  .login-desktop__banner {
+    @apply flex  w-1/2 justify-center items-center bg-primary text-secondary;
+  }
+
+  .login-mobile {
+    @apply flex m-0  w-screen;
+  }
+
+  .login-mobile__form {
+    @apply flex w-full p-4;
+  }
+
+  .login-mobile__banner {
+    @apply hidden;
+  }
+
+  .button__desktop {
+    @apply bg-primary text-text text-2xl p-3 rounded-lg hover:bg-secondary hover:text-primary hover:shadow-2xl hover:border-primary hover:border;
+  }
+
+  .button__mobile {
+    @apply bg-primary text-text text-base p-2 w-auto rounded-md active:bg-secondary active:text-primary active:shadow-2xl active:border-primary active:border;
+  }
+}
